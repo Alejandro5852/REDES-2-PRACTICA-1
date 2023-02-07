@@ -1,0 +1,120 @@
+SWITCH 0
+enable
+config terminal
+vlan 31
+name Diversificado31
+exit
+int Fa0/1
+switchport access vlan 31
+exit
+int Fa0/2
+switchport access vlan 31
+exit
+int Fa0/3
+switchport mode trunk 
+exit
+int Fa0/4
+switchport mode trunk 
+exit
+do write 
+copy running-config startup-config
+
+SWITCH 1
+enable
+config terminal
+vlan 11
+name Primaria11
+exit
+vlan 21
+name Basicos21
+exit
+vlan 31
+name Diversificado31
+exit
+int Fa0/2
+switchport access vlan 11
+exit
+int Fa0/3
+switchport access vlan 21
+exit
+int Fa0/1
+switchport access vlan 31
+exit
+int Fa0/4
+switchport mode trunk 
+exit
+int Fa0/5
+switchport mode trunk 
+exit
+do write 
+copy running-config startup-config
+
+SWITCH 2
+enable
+config terminal
+vlan 21
+name Basicos21
+exit
+int Fa0/1
+switchport access vlan 21
+exit
+int Fa0/2
+switchport access vlan 21
+exit
+int Fa0/3
+switchport mode trunk 
+exit
+int Fa0/4
+switchport mode trunk 
+exit
+do write 
+copy running-config startup-config
+
+
+SWITCH 3
+enable
+config terminal
+vlan 11
+name Primaria11
+exit
+int Fa0/1
+switchport access vlan 11
+exit
+int Fa0/2
+switchport mode trunk 
+exit
+int Fa0/3
+switchport mode trunk 
+exit
+int Fa0/4
+switchport mode trunk 
+exit
+int Fa0/5
+switchport mode trunk 
+exit
+do write 
+copy running-config startup-config
+
+SWITCH 4
+enable
+config terminal
+vlan 11
+name Primaria11
+exit
+int Fa0/1
+switchport access vlan 11
+exit
+int Fa0/2
+switchport mode trunk 
+exit
+int Fa0/3
+switchport mode trunk 
+exit
+int Fa0/4
+switchport mode trunk 
+exit
+int Fa0/5
+switchport mode trunk 
+exit
+do write 
+copy running-config startup-config
