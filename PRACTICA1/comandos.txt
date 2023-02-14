@@ -1,0 +1,160 @@
+REVISION DE ROOT
+sh spanning-tree
+
+CREACION DE SERVER
+conf t
+vtp mode server
+vtp domain g1
+vtp password g1
+
+
+CREACION CLIENT
+conf t
+vtp mode client
+vtp domain g1
+vtp password g1
+
+CREACION VLAN
+conf t
+vlan 11
+name Primaria11
+vlan 21
+name Basicos21
+vlan 31
+name Diversificado31
+
+exit
+sh vlan
+
+MODO TRUNK
+conf t
+int range f0/2-4
+switchport mode trunk
+switchport trunk allowed vlan all
+des trunk
+
+SWITCH 1
+conf t
+int range f0/2-5
+switchport mode trunk
+switchport trunk allowed vlan all
+des trunk
+
+SWITCH 2
+conf t
+int f0/2
+switchport mode trunk
+switchport trunk allowed vlan all
+des trunk
+conf t
+int f0/3
+switchport mode trunk
+switchport trunk allowed vlan all
+des trunk
+
+SWITCH 3
+conf t
+int f0/2
+switchport mode trunk
+switchport trunk allowed vlan all
+des trunk
+conf t
+int f0/3
+switchport mode trunk
+switchport trunk allowed vlan all
+des trunk
+
+SWITCH 4
+conf t
+int f0/4
+switchport mode trunk
+switchport trunk allowed vlan all
+des trunk
+conf t
+int f0/5
+switchport mode trunk
+switchport trunk allowed vlan all
+des trunk
+
+
+SWITCH 5
+conf t
+int range f0/2-5
+switchport mode trunk
+switchport trunk allowed vlan all
+des trunk
+
+VER TRUNK
+sh run
+
+VER VTP 
+sh vtp status
+
+MODE ACCESs
+switch 1
+conf t
+int f0/15
+switchport mode access
+switchport acces vlan 11
+
+switch 2
+conf t
+int f0/15
+switchport mode access
+switchport acces vlan 31
+
+conf t
+int f0/14
+switchport mode access
+switchport acces vlan 31
+
+switch 3
+conf t
+int f0/15
+switchport mode access
+switchport acces vlan 31
+
+conf t
+int f0/14
+switchport mode access
+switchport acces vlan 11
+
+conf t
+int f0/13
+switchport mode access
+switchport acces vlan 21
+
+SWITCH 4
+conf t
+int f0/15
+switchport mode access
+switchport acces vlan 21
+
+conf t
+int f0/14
+switchport mode access
+switchport acces vlan 21
+
+SWITCH 5
+conf t
+int f0/15
+switchport mode access
+switchport acces vlan 11
+
+CONFI STP
+conf t
+int f0/
+shutdown
+
+para encender
+no shutdown
+
+Rapid PVST
+conf t
+spanning-tree mod rapid-pvst
+
+pa ver
+sh spanning-tree
+
+
+
