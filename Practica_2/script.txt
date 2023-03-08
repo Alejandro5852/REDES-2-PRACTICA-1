@@ -1,0 +1,93 @@
+SW1
+
+enable
+config terminal
+vlan 61
+name CORPORATIVO61
+exit
+int Fa0/1
+switchport access vlan 61
+exit
+int Fa0/2
+switchport access vlan 61
+exit
+int Fa0/3
+switchport access vlan 61
+exit
+do write 
+exit
+copy running-config startup-config
+
+
+SW2
+
+enable
+config terminal
+vlan 61
+name CORPORATIVO61
+exit
+int Fa0/1
+switchport access vlan 61
+exit
+do write 
+exit
+copy running-config startup-config
+
+SW3
+
+enable
+config terminal
+vlan 61
+name CORPORATIVO61
+exit
+int Fa0/1
+switchport access vlan 61
+exit
+int Fa0/2
+switchport access vlan 61
+exit
+do write 
+exit
+copy running-config startup-config
+
+
+
+MSW1
+
+enable
+config terminal
+vlan 11
+name VENTAS11
+exit
+do write 
+exit
+copy running-config startup-config
+
+
+
+MSW4
+
+enable
+config terminal
+vlan 11
+name VENTAS11
+exit
+vlan 21
+name DISTRIBUCION21
+exit
+do write 
+exit
+copy running-config startup-config
+
+
+
+MSW7
+
+enable
+config terminal
+vlan 21
+name DISTRIBUCION21
+exit
+do write 
+exit
+copy running-config startup-config
