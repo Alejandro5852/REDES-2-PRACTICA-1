@@ -17,7 +17,20 @@ exit
 do write 
 exit
 copy running-config startup-config
-
+------------------------------------
+Configuraciones LACP
+int r Gig0/1-2
+switchport mode trunk
+switchport trunk allowed vlan all
+exit
+int port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan all
+exit 
+int r Gig0/1-2
+channel-group 1 mode active
+exit 
+wr
 
 SW2
 
@@ -32,6 +45,21 @@ exit
 do write 
 exit
 copy running-config startup-config
+------------------------------------
+Configuraciones LACP
+int r Gig0/1-2
+switchport mode trunk
+switchport trunk allowed vlan all
+exit
+int port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan all
+exit 
+int r Gig0/1-2
+channel-group 1 mode active
+exit 
+wr
+
 
 SW3
 
@@ -49,6 +77,20 @@ exit
 do write 
 exit
 copy running-config startup-config
+------------------------------------
+Configuraciones LACP
+int r Gig0/1-2
+switchport mode trunk
+switchport trunk allowed vlan all
+exit
+int port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan all
+exit 
+int r Gig0/1-2
+channel-group 1 mode active
+exit 
+wr
 
 
 
@@ -62,6 +104,21 @@ exit
 do write 
 exit
 copy running-config startup-config
+------------------------------------
+Configuraciones LACP
+int r Gig0/1-2
+switchport trunk encapsulation dot1q
+switchport trunk allowed vlan all
+exit
+int port-channel 1
+switchport trunk encapsulation dot1q
+switchport trunk allowed vlan all
+exit 
+int r Gig0/1-2
+channel-group 1 mode active
+exit 
+wr
+
 
 
 
@@ -78,6 +135,20 @@ exit
 do write 
 exit
 copy running-config startup-config
+------------------------------------
+Configuraciones LACP
+int r Gig0/1-2
+switchport trunk encapsulation dot1q
+switchport trunk allowed vlan all
+exit
+int port-channel 1
+switchport trunk encapsulation dot1q
+switchport trunk allowed vlan all
+exit 
+int r Gig0/1-2
+channel-group 1 mode active
+exit 
+wr
 
 
 
@@ -91,3 +162,17 @@ exit
 do write 
 exit
 copy running-config startup-config
+------------------------------------
+Configuraciones LACP
+int r Gig0/1-2
+switchport trunk encapsulation dot1q
+switchport trunk allowed vlan all
+exit
+int port-channel 1
+switchport trunk encapsulation dot1q
+switchport trunk allowed vlan all
+exit 
+int r Gig0/1-2
+channel-group 1 mode active
+exit 
+wr
