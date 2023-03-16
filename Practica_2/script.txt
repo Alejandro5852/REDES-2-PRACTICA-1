@@ -176,3 +176,96 @@ int r Gig0/1-2
 channel-group 1 mode active
 exit 
 wr
+
+
+
+
+
+
+!--- ===================================== MSW4
+
+configure terminal
+	vlan 21
+		name DISTRIBUCION21
+		exit
+	vlan 61
+		name CORPORATIVO61
+		exit
+	interface fastethernet 0/2
+		switchport mode access
+		switchport access vlan 21
+		no shutdown
+		exit
+	interface port-channel 1
+		switchport mode trunk
+		switchport trunk allowed vlan all
+		no shutdown
+		exit
+	exit
+	interface vlan 21
+		ip address 10.0.0.3 255.0.0.0
+		exit
+	interface vlan 61
+		ip address 192.168.21.1
+		exit
+	exit
+wr
+
+
+!--- ===================================== MSW7
+
+
+configure terminal 
+	vlan 21
+		name DISTRIBUCION21
+		exit
+	vlan 61
+		name CORPORATIVO61
+		exit
+	interface fastethernet 0/1
+		switchport mode access
+		switchport access vlan 21
+		no shutdown
+		exit
+	interface port-channel 1
+		switchport mode trunk
+		switchport trunk allowed vlan all
+		no shutdown
+		exit
+	interface vlan 21
+		ip address 10.0.0.2 255.0.0.0
+		exit
+	interface vlan 61
+		ip address 192.168.31.1
+		exit
+	exit
+wr
+
+
+!--- *********************************************************************
+!--- EIGRP
+!--- *********************************************************************
+
+!--- ===================================== MSW4
+configure terminal 
+	ip routing
+	route eigrp 11
+		network 192.168.21.0
+		network 10.0.0.0
+		network 192.168.31.0
+		no auto-sumary
+		exit
+	exit
+wr
+
+!--- ===================================== MSW7
+configure terminal 
+	ip routing
+	route eigrp 11
+		network 192.168.21.0
+		network 10.0.0.0
+		network 192.168.31.0
+		no auto-sumary
+		exit
+	exit
+wr
