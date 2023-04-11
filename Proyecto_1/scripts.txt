@@ -1,0 +1,69 @@
+SW1
+
+enable
+config terminal
+vlan 11
+name VLAN11
+exit
+int Fa0/1
+switchport access vlan 11
+exit
+int Fa0/2
+switchport access vlan 11
+exit
+do write 
+exit
+copy running-config startup-config
+
+SW2
+
+enable
+config terminal
+vlan 21
+name VLAN21
+exit
+int Fa0/1
+switchport access vlan 21
+exit
+int Fa0/2
+switchport access vlan 21
+exit
+do write 
+exit
+copy running-config startup-config
+
+
+SW3
+
+enable
+config terminal
+vlan 21
+name VLAN21
+exit
+int Fa0/2
+switchport access vlan 21
+exit
+int Fa0/3
+switchport access vlan 21
+exit
+do write 
+exit
+copy running-config startup-config
+
+
+SW4
+
+enable
+config terminal
+vlan 11
+name VLAN11
+exit
+int Fa0/2
+switchport access vlan 11
+exit
+int Fa0/3
+switchport access vlan 11
+exit
+do write 
+exit
+copy running-config startup-config
