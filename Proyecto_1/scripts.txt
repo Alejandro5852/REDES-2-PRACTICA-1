@@ -67,3 +67,57 @@ exit
 do write 
 exit
 copy running-config startup-config
+
+------------------------------------
+Configuraciones LACP
+MULTILAYER SWITCH2
+int r f0/3-5
+switchport trunk encapsulation dot1q
+switchport trunk allowed vlan all
+exit
+int port-channel 1
+switchport trunk encapsulation dot1q
+switchport trunk allowed vlan all
+exit 
+int r f0/3-5
+channel-group 1 mode active
+exit 
+
+MULTILAYER SWITCH13
+int r gig1/0/1-3
+switchport mode trunk
+switchport trunk allowed vlan all
+exit
+int port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan all
+exit 
+int r gig1/0/1-3
+channel-group 1 mode active
+exit 
+
+MULTILAYER SWITCH15
+int r gig1/0/1-3
+switchport mode trunk
+switchport trunk allowed vlan all
+exit
+int port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan all
+exit 
+int r gig1/0/1-3
+channel-group 1 mode active
+exit 
+
+MULTILAYER SWITCH8
+int r f0/3-5
+switchport trunk encapsulation dot1q
+switchport trunk allowed vlan all
+exit
+int port-channel 1
+switchport trunk encapsulation dot1q
+switchport trunk allowed vlan all
+exit 
+int r f0/3-5
+channel-group 1 mode active
+exit 
