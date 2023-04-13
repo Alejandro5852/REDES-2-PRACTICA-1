@@ -1,0 +1,393 @@
+Switch#
+Switch#cofn
+Switch#conf
+Switch#configure te
+Switch#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#int
+Switch(config)#interface g
+Switch(config)#interface gigabitEthernet  1/0/2
+Switch(config-if)#ip
+Switch(config-if)#ip 
+Switch(config-if)#ip ad
+Switch(config-if)#no swit
+Switch(config-if)#no switchport 
+Switch(config-if)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/0/2, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/0/2, changed state to up
+
+Switch(config-if)#
+Switch(config-if)#
+Switch(config-if)#int
+Switch(config-if)#ip
+Switch(config-if)#ip ad
+Switch(config-if)#ip address 192.168.11.33 255.255.255.248
+Switch(config-if)#no shw
+Switch(config-if)#no shu
+Switch(config-if)#no shutdown 
+Switch(config-if)#exit
+Switch(config)#
+
+
+h#
+Switch#
+Switch#
+Switch#
+Switch#
+Switch#conf
+Switch#configure t
+Switch#configure terminal int
+Switch#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#int
+Switch(config)#interface gi
+Switch(config)#interface gigabitEthernet 1/0/1
+Switch(config-if)#no swi
+Switch(config-if)#no switchport 
+Switch(config-if)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/0/1, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/0/1, changed state to up
+
+Switch(config-if)#ip 
+Switch(config-if)#ip ad
+Switch(config-if)#ip address 192.168.12.33 255.255.255.248
+Switch(config-if)#
+Switch(config-if)#no sh
+Switch(config-if)#no shutdown 
+Switch(config-if)#exit
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#
+Switch#cop
+Switch#copy run
+Switch#copy running-config st
+Switch#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Switch#
+Switch#
+Switch#
+Switch#no sh
+Switch#sh
+Switch#show run
+Switch#show running-config 
+Building configuration...
+
+
+
+
+Switch(config-if)#
+Switch(config-if)#no int
+Switch(config-if)#ip ad
+Switch(config-if)#ip address 192.168.103.1 255.255.255.0
+Switch(config-if)#no swi
+Switch(config-if)#no shu
+Switch(config-if)#no shutdown 
+Switch(config-if)#exit
+Switch(config)#
+Switch(config)#
+Switch(config)#int
+Switch(config)#interface po
+Switch(config)#interface port-channel 1
+Switch(config-if)#ip ad
+Switch(config-if)#no swit
+Switch(config-if)#no switchport 
+Switch(config-if)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Port-channel1, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Port-channel1, changed state to up
+
+Switch(config-if)#ip add
+Switch(config-if)#ip address 192.168.111.2 255.255.255.252
+Switch(config-if)#no shw
+Switch(config-if)#no shu
+Switch(config-if)#no shutdown 
+Switch(config-if)#exit
+Switch(config)#int
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#
+Switch#sho
+
+
+
+Switch(config-if)#
+Switch(config-if)#ip ad
+Switch(config-if)#ip address 192.168.1.41 255.255.255.252
+Switch(config-if)#
+Switch(config-if)#no shw
+Switch(config-if)#no swi
+Switch(config-if)#no switchport 
+Switch(config-if)#
+Switch(config-if)#no shu
+Switch(config-if)#no shutdown 
+Switch(config-if)#
+Switch(config-if)#exit
+Switch(config)#exit
+Switch#
+
+
+
+
+
+witch(config-if)#ip address 192.168.104.1 255.255.255.0
+Switch(config-if)#no swi
+Switch(config-if)#no switchport 
+Switch(config-if)#exit
+Switch(config)#int
+Switch(config)#interface po
+Switch(config)#interface port-channel 1
+Switch(config-if)#no swi
+Switch(config-if)#no switchport 
+Switch(config-if)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Port-channel1, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Port-channel1, changed state to up
+
+Switch(config-if)#
+Switch(config-if)#int
+Switch(config-if)#ip ad
+Switch(config-if)#ip address 192.168.112.2 255.255.255.252
+Switch(config-if)#no sh
+Switch(config-if)#no shutdown 
+Switch(config-if)#exit
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#
+Switch#cop
+Switch#copy run
+Switch#copy running-config s
+Switch#copy running-config st
+Switch#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Switch#
+Switch#
+Switch#show
+Switch#show run
+Switch#show running-config 
+Building configuration...
+
+
+
+
+
+
+
+
+
+Switch>enable 
+Switch#
+Switch#conf
+Switch#configure te
+Switch#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#ip rou
+Switch(config)#ip rout
+Switch(config)#ip routing
+Switch(config)#route ospf 1
+Switch(config-router)#net
+Switch(config-router)#network 192.168.12.32 0.0.0.8
+% Incomplete command.
+Switch(config-router)#network 192.168.12.32 0.0.0.8 area 1
+OSPF: Invalid address/mask combination (discontiguous mask)
+Switch(config-router)#network 192.168.12.32 0.0.0.7 area 1
+Switch(config-router)#network 192.168.1.32 0.0.0.8 area 1
+OSPF: Invalid address/mask combination (discontiguous mask)
+Switch(config-router)#network 192.168.1.32 0.0.0.7 area 1
+Switch(config-router)#net
+Switch(config-router)#network 192.168.101.0 0.0.0.255 area 1
+Switch(config-router)#netw
+Switch(config-router)#network 192.168.102.0 0.0.0.255 area 1
+Switch(config-router)#exit
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#cop
+Switch#copy run
+Switch#copy running-config st
+Switch#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+
+
+
+
+
+
+
+Switch>en
+Switch>enable 
+Switch#conf
+Switch#configure te
+Switch#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#
+Switch(config)#
+Switch(config)#ip routing
+Switch(config)#route
+Switch(config)#rout
+Switch(config)#route ospf 1
+Switch(config-router)#net
+Switch(config-router)#network 192.168.168.1.40 0.0.0.2
+                              ^
+% Invalid input detected at '^' marker.
+	
+Switch(config-router)#net
+Switch(config-router)#network 192.168.1.40 0.0.0.2
+% Incomplete command.
+Switch(config-router)#network 192.168.1.40 0.0.0.2 area 1
+OSPF: Invalid address/mask combination (discontiguous mask)
+Switch(config-router)#network 192.168.1.40 0.0.0.1 area 1
+Switch(config-router)#
+Switch(config-router)#net
+Switch(config-router)#network 192.168.103.0 0.0.0.255 area 1
+Switch(config-router)#net
+Switch(config-router)#network 192.168.104.0 0.0.0.255 area 1
+Switch(config-router)#exit
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#
+Switch#cop
+Switch#copy run
+Switch#copy running-config st
+Switch#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Switch#
+Switch#
+
+
+
+
+
+
+
+
+
+
+
+
+
+Switch>
+Switch>ena
+Switch>enable 
+Switch#conf
+Switch#configure ter
+Switch#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#ip routing
+Switch(config)#route ospf 1
+Switch(config-router)#net
+Switch(config-router)#network 192.168.111.2 0.0.0.2
+% Incomplete command.
+Switch(config-router)#network 192.168.111.2 0.0.0.2 area 1
+OSPF: Invalid address/mask combination (discontiguous mask)
+Switch(config-router)#net
+Switch(config-router)#network 192.168.111.2 0.0.0.3 area 1
+Switch(config-router)#net
+Switch(config-router)#network 192.168.101.0 0.0.0.255 area 1
+Switch(config-router)#net
+Switch(config-router)#network 192.168.
+02:43:59: %OSPF-5-ADJCHG: Process 1, Nbr 192.168.102.2 on GigabitEthernet1/1/1 from LOADING to FUL
+Switch(config-router)#
+Switch(config-router)#network 192.168.105.0 0.0.0.255 area 1
+Switch(config-router)#network 192.168.103.0 0.0.0.255 area 1
+Switch(config-router)#
+02:44:41: %OSPF-5-ADJCHG: Process 1, Nbr 192.168.104.2 on GigabitEthernet1/1/2 from LOADING to FULL, Loading Done
+
+Switch(config-router)#
+Switch(config-router)#
+Switch(config-router)#exit
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#
+Switch#cop
+Switch#copy run
+Switch#copy running-config st
+Switch#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Switch#
+Switch#
+
+
+
+
+
+
+
+
+
+Switch>enable 
+Switch#conf
+Switch#configure te
+Switch#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#int
+Switch(config)#interface por
+Switch(config)#ip routing
+Switch(config)#route ospf 1
+Switch(config-router)#net
+Switch(config-router)#network 192.168.112.0 0.0.0.3 area 1
+Switch(config-router)#network 192.168.102.0 0.0.0.255 area 1
+Switch(config-router)#network 192.168.10.0 0.0.0.255 area 1
+02:47:04: %OSPF-5-ADJCHG: Process 1, Nbr 192.168.102.2 on GigabitEthernet1/1/1 from LOADING to FULL, Loading Done
+5
+Switch(config-router)#network 192.168.105.0 0.0.0.255 area 1
+Switch(config-router)#network 192.168.104.0 0.0.0.255 area 1
+Switch(config-router)#
+Switch(config-router)#
+02:47:34: %OSPF-5-ADJCHG: Process 1, Nbr 192.168.104.2 on GigabitEthernet1/1/2 from LOADING to FULL, Loading Done
+
+Switch(config-router)#
+02:47:34: %OSPF-5-ADJCHG: Process 1, Nbr 192.168.111.2 on GigabitEthernet1/1/3 from LOADING to FULL, Loading Done
+
+Switch(config-router)#
+Switch(config-router)#exit
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#cop
+Switch#copy run
+Switch#copy running-config st
+Switch#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Switch#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
